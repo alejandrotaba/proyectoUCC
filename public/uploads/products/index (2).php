@@ -1,0 +1,1 @@
+<?php echo 'Inicio del sistema'; ?>

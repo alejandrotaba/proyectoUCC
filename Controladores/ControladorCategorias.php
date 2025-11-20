@@ -1,119 +1,150 @@
 <?php
-
 require_once "Modelos/ModeloCategorias.php";
 
 class ControladorCategorias
 {
-    public static function crearCategoria()
+    /* =========================
+       Helpers
+    ==========================*/
+    private static function swal(string $title, string $text, string $icon, string $redirect = 'categorias'): void
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['categoria']) || isset($_POST['id_categoria'])) {
-            // Nota: si viene id_categoria, NO es creación
+        // Escapar
+        $title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
+        $text  = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+        $redir = htmlspecialchars($redirect, ENT_QUOTES, 'UTF-8');
+
+        echo '<script>
+            if (window.Swal) {
+              Swal.fire({ title: "'.$title.'", text: "'.$text.'", icon: "'.$icon.'", confirmButtonText: "Entendido"})
+                  .then(() => { window.location = "'.$redir.'"; });
+            } else {
+              alert("'.$title.'\\n'.$text.'");
+              window.location = "'.$redir.'";
+            }
+        </script>';
+    }
+
+    private static function validarNombre(?string $nombre): ?string
+    {
+        if ($nombre === null) return null;
+        $nombre = trim($nombre);
+
+        // Letras (incluye acentos), números, espacios y guiones
+        if (!preg_match('/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s\-]+$/u', $nombre)) {
+            return null;
+        }
+        // Longitud mínima razonable
+        if (mb_strlen($nombre) < 2) {
+            return null;
+        }
+        return $nombre;
+    }
+
+    private static function filtrarId($valor): ?int
+    {
+        $id = filter_var($valor, FILTER_VALIDATE_INT);
+        return ($id && $id > 0) ? (int)$id : null;
+    }
+
+    /* =========================
+       Crear
+       Espera: POST[categoria]
+       (tu vista envía este formulario en el modal "Nueva categoría")
+    ==========================*/
+    public function crearCategoria(): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') return;
+
+        // Si viene id_categoria, entonces NO es "crear" (evita choque con form de edición)
+        if (isset($_POST['id_categoria'])) return;
+
+        if (!isset($_POST['categoria'])) return;
+
+        $nombre = self::validarNombre($_POST['categoria']);
+        if ($nombre === null) {
+            self::swal('Cuidado', 'No se permiten caracteres especiales o el nombre es muy corto.', 'error');
             return;
         }
 
-        $categoria = trim($_POST['categoria']);
-        if (!preg_match('/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s\-]+$/u', $categoria)) {
-            echo self::swal('Cuidado', 'No se permiten caracteres especiales.', 'error', 'categorias');
-            return;
-        }
+        $nuevoId = ModeloCategorias::registrarCategoria($nombre);
 
-        $nuevoId = ModeloCategorias::registrarCategoria($categoria);
         if ($nuevoId) {
-            echo self::swal('Registro exitoso', 'La categoría ha sido guardada exitosamente.', 'success', 'categorias');
+            self::swal('Registro exitoso', 'La categoría ha sido guardada exitosamente.', 'success');
         } else {
-            echo self::swal('Error', 'No fue posible guardar la categoría. Intenta nuevamente.', 'error', 'categorias');
+            self::swal('Error', 'No fue posible guardar la categoría. Intenta nuevamente.', 'error');
         }
     }
 
-    // ====== NUEVO: EDICIÓN SEPARADA ======
-    public static function editarCategoria()
+    /* =========================
+       Editar
+       Espera: POST[id_categoria, categoria]
+       (tu vista envía este formulario en el modal "Editar categoría")
+    ==========================*/
+    public function editarCategoria(): void
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['id_categoria'], $_POST['categoria'])) {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') return;
+
+        // Este bloque solo aplica si viene id de edición
+        if (!isset($_POST['id_categoria'])) return;
+        if (!isset($_POST['categoria'])) {
+            self::swal('Cuidado', 'Falta el nombre de la categoría.', 'error');
             return;
         }
 
-        $id        = (int)($_POST['id_categoria'] ?? 0);
-        $categoria = trim($_POST['categoria'] ?? '');
-
-        if ($id <= 0) {
-            echo self::swal('Cuidado', 'ID inválido.', 'error', 'categorias');
+        $id = self::filtrarId($_POST['id_categoria']);
+        if ($id === null) {
+            self::swal('Cuidado', 'El identificador de la categoría es inválido.', 'error');
             return;
         }
 
-        if ($categoria === '' || !preg_match('/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s\-]+$/u', $categoria)) {
-            echo self::swal('Cuidado', 'No se permiten caracteres especiales.', 'error', 'categorias');
+        $nombre = self::validarNombre($_POST['categoria']);
+        if ($nombre === null) {
+            self::swal('Cuidado', 'No se permiten caracteres especiales o el nombre es muy corto.', 'error');
             return;
         }
 
-        $ok = ModeloCategorias::actualizarCategoria($id, $categoria);
+        $ok = ModeloCategorias::actualizarCategoria($id, $nombre);
 
         if ($ok) {
-            echo self::swal('Actualización exitosa', 'La categoría se actualizó correctamente.', 'success', 'categorias');
+            self::swal('Actualización exitosa', 'La categoría ha sido actualizada correctamente.', 'success');
         } else {
-            echo self::swal('Error', 'No fue posible actualizar la categoría.', 'error', 'categorias');
+            self::swal('Error', 'No fue posible actualizar la categoría. Intenta nuevamente.', 'error');
         }
     }
 
-    // Listado
-    public static function mostrarCategorias()
+    /* =========================
+       Eliminar
+       Espera: POST[id_categoria_eliminar]
+       (tu vista envía este formulario oculto al confirmar SweetAlert)
+    ==========================*/
+    public function eliminarCategoria(): void
     {
-        return ModeloCategorias::mostrarCategorias();
-    }
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') return;
 
-    // Helper SweetAlert+redirect
-    private static function swal(string $title, string $text, string $icon, string $redirect): string
-    {
-        $titleEsc = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
-        $textEsc  = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-        $redirEsc = htmlspecialchars($redirect, ENT_QUOTES, 'UTF-8');
+        if (!isset($_POST['id_categoria_eliminar'])) return;
 
-        return '
-            <script>
-                Swal.fire({
-                    title: "'.$titleEsc.'",
-                    text: "'.$textEsc.'",
-                    icon: "'.$icon.'",
-                    confirmButtonText: "Entendido"
-                }).then(() => { window.location = "'.$redirEsc.'"; });
-            </script>
-        ';
-    }
-
-    //Eliminar categorias
-    public static function eliminarCategoria(): void
-    {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['id_categoria_eliminar'])) {
+        $id = self::filtrarId($_POST['id_categoria_eliminar']);
+        if ($id === null) {
+            self::swal('Cuidado', 'El identificador de la categoría es inválido.', 'error');
             return;
         }
 
-        $id = (int)($_POST['id_categoria_eliminar'] ?? 0);
-        if ($id <= 0) {
-            echo self::swal('Cuidado', 'ID inválido para eliminar.', 'error', 'categorias');
-            return;
-        }
+        $ok = ModeloCategorias::eliminarCategoria($id);
 
-        try {
-            // Eliminación FÍSICA. (Más abajo te dejo variante lógica)
-            $ok = ModeloCategorias::eliminarCategoria($id);
-
-            if ($ok) {
-                echo self::swal('Eliminado', 'La categoría fue eliminada correctamente.', 'success', 'categorias');
-            } else {
-                echo self::swal('Error', 'No fue posible eliminar la categoría.', 'error', 'categorias');
-            }
-        } catch (Throwable $e) {
-            // Si hay FK (productos asociados), MySQL lanza 1451
-            $msg = 'Ocurrió un error inesperado.';
-            if ($e instanceof PDOException) {
-                $code = (int)($e->errorInfo[1] ?? 0);
-                if ($code === 1451) {
-                    $msg = 'No se puede eliminar: la categoría tiene registros asociados.';
-                }
-            }
-            error_log("Error en eliminarCategoria: " . $e->getMessage());
-            echo self::swal('Error', $msg, 'error', 'categorias');
+        if ($ok) {
+            self::swal('Eliminación exitosa', 'La categoría ha sido eliminada correctamente.', 'success');
+        } else {
+            // Si tu modelo devuelve false por restricción de FK, aquí puedes personalizar el mensaje
+            self::swal('No se pudo eliminar', 'La categoría no se pudo eliminar. Verifica si tiene productos asociados.', 'error');
         }
     }
 
-
+    /* =========================
+       Listar
+       (usado por tu vista para pintar la tabla)
+    ==========================*/
+    public static function mostrarCategorias(): array
+    {
+        return ModeloCategorias::mostrarCategorias() ?? [];
+    }
 }

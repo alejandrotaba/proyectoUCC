@@ -1,0 +1,142 @@
+[13-Nov-2025 12:56:39 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:41 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:43 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:44 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:45 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:46 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:46 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:56 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:56:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:57:01 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:57:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:57:50 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:57:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:57:50 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:57:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:58:06 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:58:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:58:07 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 12:58:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:01:07 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:01:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:01:12 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:01:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:01:14 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:01:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:02:00 Europe/Berlin] PHP Warning:  require_once(Modelos/ModeloLogs.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 13:02:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'Modelos/ModeloLogs.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php:3
+Stack trace:
+#0 C:\xampp\htdocs\inventarioucc\index.php(24): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 3
+[13-Nov-2025 14:12:52 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:12:52 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:00 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:00 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:00 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:00 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:01 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:01 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:01 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:01 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:01 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:01 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:02 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:02 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:02 Europe/Berlin] PHP Warning:  include_once(vistas/publicas/registro/registro.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[13-Nov-2025 14:13:02 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'vistas/publicas/registro/registro.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\inventarioucc\vistas\publicas\public.php on line 15
+[20-Nov-2025 12:13:45 Europe/Berlin] Error en findByEmail: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[20-Nov-2025 12:13:59 Europe/Berlin] Error en findByEmail: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[20-Nov-2025 13:13:54 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:13:55 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:13:57 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:13:58 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:13:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:09 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:10 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:13 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:15 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:15 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:15 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:15 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:16 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 13:14:16 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:27:09 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:27:49 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:27:58 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:27:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:27:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:27:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87
+[20-Nov-2025 15:57:19 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "function" or "const" in C:\xampp\htdocs\inventarioucc\Controladores\ControladorUsuarios.php on line 87

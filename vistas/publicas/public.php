@@ -12,7 +12,7 @@
                             $_GET["route"] == "registro" || 
                             $_GET["route"] == "ingreso"
                         ){
-                            include_once "vistas/publicas/".$_GET["route"]."/index.php";
+                            include_once "vistas/publicas/".$_GET["route"]."/".$_GET["route"].".php";
 
                         }
                         
@@ -23,11 +23,11 @@
 
                         // }
                         else{
-                            include_once "vistas/publicas/404/index.php";
+                            include_once "vistas/404/404.php";
                         }
 
                     }else{
-                        include_once "vistas/publicas/inicio/index.php";
+                        include_once "vistas/publicas/inicio/inicio.php";
                     }
                     
                 ?>

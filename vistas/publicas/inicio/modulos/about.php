@@ -2,7 +2,7 @@
 <section class="page-section" id="about">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Universidad Cooperativa de Colombia</h2>
+            <h2 class="section-heading text-uppercase"></h2>
             <h3 class="section-subheading text-muted">Historia y crecimiento institucional.</h3>
         </div>
         <ul class="timeline">

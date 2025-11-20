@@ -51,4 +51,87 @@ class ModeloUsuarios {
             return null;
         }
     }
+
+    static public function mdlActualizarPerfil($datos){
+
+    $pdo = Conexion::conectar()->prepare("UPDATE usuarios SET nombre=:nombre, correo=:correo WHERE id=:id");
+
+    $pdo->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+    $pdo->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+    $pdo->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+
+    if($pdo->execute()){
+        return "ok";
+    } else {
+        return "error";
+    }
+   }
+
+   class ModeloUsuarios {
+    static public function mdlObtenerUsuarioPorId($id){
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM usuarios WHERE id = :id");
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    static public function mdlObtenerUsuarioPorCorreo($correo){
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM usuarios WHERE correo = :correo");
+        $stmt->bindParam(":correo",$correo,PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    static public function mdlActualizarPerfilConFoto($id, $nombre, $correo, $foto = null){
+        if($foto){
+            $sql = "UPDATE usuarios SET nombre=:nombre, correo=:correo, foto=:foto WHERE id=:id";
+        } else {
+            $sql = "UPDATE usuarios SET nombre=:nombre, correo=:correo WHERE id=:id";
+        }
+        $stmt = Conexion::conectar()->prepare($sql);
+        $stmt->bindParam(":nombre",$nombre,PDO::PARAM_STR);
+        $stmt->bindParam(":correo",$correo,PDO::PARAM_STR);
+        if($foto) $stmt->bindParam(":foto",$foto,PDO::PARAM_STR);
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    static public function mdlCambiarPassword($id, $hash){
+        $stmt = Conexion::conectar()->prepare("UPDATE usuarios SET password = :pw WHERE id = :id");
+        $stmt->bindParam(":pw",$hash);
+        $stmt->bindParam(":id",$id);
+        return $stmt->execute();
+    }
+
+    static public function mdlGuardarCodigo2FA($id, $codigo, $expira){
+        $stmt = Conexion::conectar()->prepare("UPDATE usuarios SET codigo_2fa=:c, codigo_2fa_expira=:e WHERE id=:id");
+        $stmt->bindParam(":c",$codigo);
+        $stmt->bindParam(":e",$expira);
+        $stmt->bindParam(":id",$id);
+        return $stmt->execute();
+    }
+
+    static public function mdlGuardarPalabraClave($id, $hash){
+        $stmt = Conexion::conectar()->prepare("UPDATE usuarios SET palabra_clave=:p WHERE id=:id");
+        $stmt->bindParam(":p",$hash);
+        $stmt->bindParam(":id",$id);
+        return $stmt->execute();
+    }
+
+    static public function mdlObtenerPermisos($id){
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM permisos WHERE usuario_id = :id LIMIT 1");
+        $stmt->bindParam(":id",$id,PDO::PARAM_INT);
+        $stmt->execute();
+        $r = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$r){
+            // devolver valores por defecto
+            return [
+                'editar_dashboard'=>0,'crear_botones'=>0,'eliminar_botones'=>0,'cambiar_nombre'=>1,'cambiar_correo'=>1
+            ];
+        }
+        return $r;
+    }
+  }
+
+
 }

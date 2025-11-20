@@ -1,0 +1,1 @@
+Sistema completo con perfil, cambio de contraseña, 2FA opcional y permisos.
